@@ -9,7 +9,7 @@ int binary_search(int arr[], int size, int key) {
     int right = size - 1;
 
     while (left <= right) {
-        int mid = left + (right - left) / 2;
+        int mid = left + (right - left) /2;
 
         if (arr[mid] == key) {
             return mid;
@@ -52,4 +52,5 @@ void test_binary_search() {
 int main() {
     test_binary_search();
     return 0;
+
 }
