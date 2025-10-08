@@ -31,7 +31,7 @@ void test_binary_search() {
 
     int arr1[] = {42};
     assert(binary_search(arr1, 1, 42) == 0);
-    assert(binary_search(arr1, 1, 5) == -1);
+    assert(binary_search(arr1, 1, 4) == -1);
 
     int arr_even[] = {1, 3, 5, 7};
     assert(binary_search(arr_even, 4, 1) == 0);
@@ -52,4 +52,5 @@ void test_binary_search() {
 int main() {
     test_binary_search();
     return 0;
+
 }
