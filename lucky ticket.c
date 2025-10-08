@@ -3,21 +3,23 @@
 
 
 int main() {
+    const int max_digit = 9;
+    const int max_sum = 14;
 
     int sums_count[14] = {0};
 
-    for (int a=0; a<=9; a++) {
-        for (int b=0; b<= 9; b++) {
-            for (int c=0; c<=9; c++) {
-                int sum = a+b+c;
-                if (sum < 14) {
+    for (int a=0; a <= max_digit; a++) {
+        for (int b=0; b <= max_digit; b++) {
+            for (int c = 0; c <= max_digit; c++) {
+                int sum = a + b + c;
+                if (sum < max_sum) {
                     sums_count[sum]++;
                 }
             }
         }
     }
     int lucky_tickets = 0;
-    for (int i = 0; i < 14; i++) {
+    for (int i = 0; i < max_sum; i++) {
         lucky_tickets += 2 * sums_count[i] * sums_count[i];
 
     }
@@ -28,11 +30,7 @@ int main() {
 
     printf("Total number of tickets:%d\n", lucky_tickets);
     printf("Percent of lucky tickets: %.2f%%\n", percentage);
-    for (int q = 0; q < 14; q++) {
-        printf("Arr: %d\n", sums_count[q]);
-    }
 
 
     return 0;
 }
-
