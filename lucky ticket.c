@@ -7,7 +7,7 @@ int main() {
     const size_t half_array_size = (half_ticket_max_sum + 1)/2;
     const size_t total_tickets = 1000000;
 
-    int sums_count[half_array_size];
+    size_t sums_count[half_array_size];
     for (int i = 0; i < half_array_size; i++) {
         sums_count[i] = 0;
     }
@@ -35,3 +35,4 @@ int main() {
 
     return 0;
 }
+
